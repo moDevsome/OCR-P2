@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bienvenu sur Booki !</title>
+        <meta name="description" content="Trouvez votre hébergement pour des vacances de rêve."/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <header>
+            <div id="header-top">
+                <div id="logo">
+                    <img alt="Plateforme de réservation Booki" src="images/logo.png"/>
+                </div>
+                <nav id="header-right">
+                    <a title="Hébergements" href="#host">
+                        <span>
+                            Hébergements
+                        </span>
+                        <!-- the top border displayed where the span is hovered -->
+                        <i class="nav-link-top-border">h</i>
+                    </a>
+                    <a title="Activités" href="#activities">
+                        <span>
+                            Activités
+                        </span>
+                        <!-- the top border displayed where the span is hovered -->
+                        <i class="nav-link-top-border">a</i>
+                    </a>
+                </nav>
+            </div>
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre ville ou en pleine nature</p>
+        </header>
+        <main>
+            <form id="search" role="search">
+                <div class="form-field" id="location-form-field">
+                    <i class="fa-solid fa-location-dot"></i><input type="text" name="location" value="Marseille, France"/><button>Rechercher</button>
+                </div>
+                <div class="form-field" id="filter-form-field">
+                    <label>Filtres</label>
+                    <button class="filter" data-name="eco">
+                        <span class="filter-text">
+                            Économique
+                        </span>
+                        <span class="filter-icon">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                        </span>
+                    </button>
+                    <button class="filter" data-name="family">
+                        <span class="filter-text">
+                            Familial
+                        </span>
+                        <span class="filter-icon">
+                            <i class="fa-solid fa-child-reaching"></i>
+                        </span>
+                    </button>
+                    <button class="filter" data-name="romantique">
+                        <span class="filter-text">
+                            Romantique
+                        </span>
+                        <span class="filter-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </span>
+                    </button>
+                    <button class="filter" data-name="animals">
+                        <span class="filter-text">
+                            Animaux autorisés
+                        </span>
+                        <span class="filter-icon">
+                            <i class="fa-solid fa-dog"></i>
+                        </span>
+                    </button>
+                </div>
+            </form>
+            <div id="host-city-count">
+                <span>
+                    <i class="fa fa-info"></i>
+                </span>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+            <div id="host">
+                <section id="current-city-host">
+                    <h2>Hébergements à Marseille</h2>
+                    <div class="host-wrapper">
+                        <a class="host" href="#">
+                            <div class="host-image">
+                                <img alt="Auberge La Cannebière" src="images/hebergements/3_medium/auberge-la-cannebiere.jpg"/>
+                            </div>
+                            <div class="host-info">
+                                <h4 class="host-title">Auberge La Cannebière</h4>
+                                <p>Nuit à partir de <b>25€</b></p>
+                                <div class="host-rate four-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="host" href="#">
+                            <div class="host-image">
+                                <img alt="Hôtel du port" src="images/hebergements/3_medium/hotel-du-port.jpg"/>
+                            </div>
+                            <div class="host-info">
+                                <h4 class="host-title">Hôtel du port</h4>
+                                <p>Nuit à partir de <b>52€</b></p>
+                                <div class="host-rate five-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="host" href="#">
+                            <div class="host-image">
+                                <img alt="Hôtel Les mouettes" src="images/hebergements/3_medium/hotel-les-mouettes.jpg"/>
+                            </div>
+                            <div class="host-info">
+                                <h4 class="host-title">Hôtel Les mouettes</h4>
+                                <p>Nuit à partir de <b>76€</b></p>
+                                <div class="host-rate four-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="host" href="#">
+                            <div class="host-image">
+                                <img alt="Hôtel de la mer" src="images/hebergements/3_medium/hotel-de-la-mer.jpg"/>
+                            </div>
+                            <div class="host-info">
+                                <h4 class="host-title">Hôtel de la mer</h4>
+                                <p>Nuit à partir de <b>46€</b></p>
+                                <div class="host-rate three-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="host" href="#">
+                            <div class="host-image">
+                                <img alt="Auberge Le Panier" src="images/hebergements/3_medium/auberge-le-panier.jpg"/>
+                            </div>
+                            <div class="host-info">
+                                <h4 class="host-title">Auberge Le Panier</h4>
+                                <p>Nuit à partir de <b>23€</b></p>
+                                <div class="host-rate four-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="host" href="#">
+                            <div class="host-image">
+                                <img alt="Hôtel chez Amina" src="images/hebergements/3_medium/hotel-chez-amina.jpg"/>
+                            </div>
+                            <div class="host-info">
+                                <h4 class="host-title">Hôtel chez Amina</h4>
+                                <p>Nuit à partir de <b>96€</b></p>
+                                <div class="host-rate five-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <a id="city-read-more" href="#">
+                        Afficher plus
+                    </a>
+                </section>
+                <section id="featured-host">
+                    <h2>Les plus populaires</h2>
+                    <i class="fa-solid fa-star"></i>
+                    <div class="host-wrapper">
+                        <a class="host" href="#">
+                            <div class="host-image">
+                                <img alt="Hôtel Le soleil du matin" src="images/hebergements/3_medium/hotel-soleil-du-matin.jpg"/>
+                            </div>
+                            <div class="host-info">
+                                <div class="host-info-header">
+                                    <h4 class="host-title">Hôtel Le soleil du matin</h4>
+                                    <p>Nuit à partir de <b>128€</b></p>
+                                </div>
+                                <div class="host-rate five-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+            <section id="activities">
+                <h2>Activités à Marseille</h2>
+                <div id="activities-wrapper">
+
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section role="contentinfo">
+                <h3>À propos</h3>
+                <ul>
+                    <li>Fonctionnement du site</li>
+                    <li>Conditions générales de vente</li>
+                    <li>Données et confidentialité</li>
+                </ul>
+            </section>
+            <section role="contentinfo">
+                <h3>Nos hébergements</h3>
+                <ul>
+                    <li>Charte qualité</li>
+                    <li>Soumettre votre hôtel</li>
+                </ul>
+            </section>
+            <section role="contentinfo">
+                <h3>Assistance</h3>
+                <ul>
+                    <li>Centre d'aide</li>
+                    <li>Nous contacter</li>
+                </ul>
+            </section>
+        </footer>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            document.querySelectorAll("button.filter").forEach(function(el) {
+
+                el.addEventListener("click", function(event) {
+
+                    event.stopPropagation();
+                    event.preventDefault();
+
+                    if(!el.classList.contains("active")) {
+
+                        el.classList.add("active");
+
+                    }
+                    else {
+
+                        el.classList.remove("active");
+
+                    }
+
+                    return false;
+
+                });
+
+            });
+        });
+        </script>
+    </body>
+</html>
