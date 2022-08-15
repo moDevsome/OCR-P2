@@ -29,10 +29,15 @@ element {
 
 /** VARS **/
 :root {
+
+    --desktop-document-width: 1340px;
+
     --booki-dark-blue: rgb(0, 101, 252);
     --booki-light-blue: rgb(222, 235, 255);
     --booki-dark-gray: rgb(217, 217, 217);
     --booki-light-gray: rgb(242, 242, 242);
+
+    --box-shadow-color: rgba(153, 153, 153, 0.3);
 }
 
 /** RESET
@@ -70,7 +75,7 @@ body {
     color: #000;
 }
 header, main {
-    width: 1340px;
+    width: var(--desktop-document-width);
     margin: 0 auto;
 }
 h1 {
@@ -181,12 +186,22 @@ form#search > div#location-form-field > button {
     width: 132px;
 	height: 100%;
     padding: 0;
-	border: medium none;
     font-size: 16px;
 	font-weight: 600;
     color: #fff;
     background-color: var(--booki-dark-blue);
+    border: 1px solid var(--booki-dark-blue);
     border-radius: 0 15px 15px 0;
+}
+form#search > div#location-form-field > button > i {
+    display: none;
+}
+form#search > div#location-form-field > button:hover {
+    color: var(--booki-dark-blue);
+    background-color: #fff;
+}
+form#search > div#location-form-field > button:hover > i {
+    display: inline;
 }
 form#search > div#filter-form-field {
 	display: flex;
@@ -280,6 +295,7 @@ div#host-city-count > span > i::before {
 
 /* Host wrapper */
 div#host {
+    margin-bottom: 64px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -302,6 +318,11 @@ div#host > section > div.host-wrapper {
 }
 div#host > section > div.host-wrapper > a.host {
 	width: 246px;
+    box-shadow: 0 0 12px var(--box-shadow-color);
+    border-radius: 25px;
+}
+div#host > section > div.host-wrapper > a.host:hover {
+    box-shadow: none;
 }
 div#host > section > div.host-wrapper > a.host > div.host-image {
 	width: 236px;
@@ -315,6 +336,16 @@ div#host > section > div.host-wrapper > a.host > div.host-image {
 	border-radius: 25px 25px 0 0;
 	overflow: hidden;
 }
+div#host > section > div.host-wrapper > a.host > div.host-image > img {
+    -moz-transition: transform 400ms;
+    -webkit-transition: transform 400ms;
+    transition: transform 400ms;
+}
+div#host > section > div.host-wrapper > a.host:hover > div.host-image > img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
 div#host > section > div.host-wrapper > a.host > div.host-info {
     /*
         There are 16 pixels in each side on the wireframe, we sum 11px (padding) and 5px (border)
@@ -327,19 +358,20 @@ div#host > section > div.host-wrapper > a.host > div.host-info {
     border-bottom: 5px solid #fff;
     border-right: 5px solid #fff;
 	border-radius: 0 0 25px 25px;
-
-    box-shadow: 0 8px 10px rgba(153, 153, 153, 0.3);
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > h4,
-div#host > section > div.host-wrapper > a.host > div.host-info > p {
+div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-header > h4,
+div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-header > p {
     color: #000;
     margin-bottom: 8px;
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > h4  {
+div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-header > h4  {
 	font-weight: 700;
     line-height: 20px;
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > p {
+div#host > section > div.host-wrapper > a.host:hover > div.host-info > div.host-info-header > h4 {
+    color: var(--booki-dark-blue);
+}
+div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-header > p {
     font-size: 14px;
 }
 /* City host section */
@@ -385,7 +417,15 @@ div#host > section > a#city-read-more {
     font-size: 18px;
     font-weight: 600;
     color: #000;
-    cursor: default;
+}
+div#host > section > a#city-read-more > i {
+    visibility: hidden;
+}
+div#host > section > a#city-read-more:hover {
+    color: var(--booki-dark-blue);
+}
+div#host > section > a#city-read-more:hover > i {
+    visibility: visible;
 }
 /* Featured host section */
 div#host > section#featured-host {
@@ -406,6 +446,7 @@ div#host > section#featured-host > h2 + i::before {
 div#host > section#featured-host > div.host-wrapper {
     width: 343px;
     flex-flow: column wrap;
+    gap: 32px;
 }
 div#host > section#featured-host > div.host-wrapper > a.host {
 	width: 343px;
@@ -427,28 +468,122 @@ div#host > section#featured-host > div.host-wrapper > a.host > div.host-image {
 	overflow: hidden;
 }
 div#host > section#featured-host > div.host-wrapper > a.host > div.host-image > img {
-    width: auto;
-    max-width: initial;
+    width: fit-content;
+    height: 100%;
+    object-fit: cover;
 }
 div#host > section#featured-host > div.host-wrapper > a.host > div.host-info {
 	width: 210px;
-
     /*
         There are 15 pixel at the top of the element, we sum 15px (padding) and 5px (border-top)
         There are 16 pixels in each side on the wireframe, we sum 11px (padding) and 5px (border)
         There are 11 pixels in bottom, we sum 6px (padding) and 5px (border)
     */
 	padding: 15px 11px 6px 21px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
 	background-color: #fff;
     border-top: 5px solid #fff;
 	border-left: medium none;
-    border-bottom: 5px solid #fff;
+    border-bottom: 14px solid #fff;
     border-right: 5px solid #fff;
 	border-radius: 0 25px 25px 0;
-
-    box-shadow: 0 8px 10px rgba(153, 153, 153, 0.3);
 }
 div#host > section#featured-host > div.host-wrapper > a.host > div.host-info > div.host-info-header {
-    /** host-info-header is a specific class for featured host **/
-	width: 131px;
+    width: fit-content
+}
+
+/* Activities wrapper */
+section#activities {
+	margin-bottom: 60px;
+}
+section#activities > h2 {
+    margin-bottom: 27px;
+}
+section#activities > div#activities-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+section#activities > div#activities-wrapper > div.activities-col {
+	width: 302px;
+	height: 445px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+section#activities > div#activities-wrapper > div.activities-col > a.activity {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+	border-radius: 25px;
+    box-shadow: 0 0 12px var(--box-shadow-color);
+}
+section#activities > div#activities-wrapper > div.activities-col > a.activity:hover {
+    box-shadow: none;
+}
+section#activities > div#activities-wrapper > div.activities-col > a#fort-pomegue {
+	height: 236px;
+}
+section#activities > div#activities-wrapper > div.activities-col > a#iles-frioul {
+	height: 164px;
+}
+section#activities > div#activities-wrapper > div.activities-col > a#notre-dame {
+	height: 194px;
+}
+section#activities > div#activities-wrapper > div.activities-col > a#parc-longchamp {
+	height: 208px;
+}
+section#activities > div#activities-wrapper > div.activities-col > a.activity > div.activity-image {
+	height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+	border-radius: 25px 25px 0 0;
+    overflow: hidden;
+}
+section#activities > div#activities-wrapper > div.activities-col > a.activity > div.activity-image > img {
+    height: 100%;
+    object-fit: cover;
+}
+section#activities > div#activities-wrapper > div.activities-col > a.activity > span.activity-label {
+    padding: 20px;
+    display: block;
+    font-weight: 700;
+	color: #000;
+}
+section#activities > div#activities-wrapper > div.activities-col > a.activity:hover > span.activity-label {
+    color: var(--booki-dark-blue);
+}
+
+/* Activities wrapper */
+footer {
+    padding: 48px 0 55px 0;
+    background-color: var(--booki-light-gray);
+}
+footer > div#footer-inner {
+	width: var(--desktop-document-width);
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+footer > div#footer-inner > section {
+    width: 453px;
+}
+footer > div#footer-inner > section > h3 {
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 700;
+}
+footer > div#footer-inner > section > ul > li {
+    margin-bottom: 18px;
+    list-style: none;
+}
+footer > div#footer-inner > section > ul > li > a {
+    color: #000;
+}
+footer > div#footer-inner > section > ul > li > a:hover {
+    color: var(--booki-dark-blue);
 }
