@@ -468,7 +468,8 @@ div#host > section#featured-host > div.host-wrapper > a.host > div.host-image {
 	overflow: hidden;
 }
 div#host > section#featured-host > div.host-wrapper > a.host > div.host-image > img {
-    width: fit-content;
+    /* -moz-width: fit-content; */
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -545,6 +546,7 @@ section#activities > div#activities-wrapper > div.activities-col > a.activity > 
     overflow: hidden;
 }
 section#activities > div#activities-wrapper > div.activities-col > a.activity > div.activity-image > img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
