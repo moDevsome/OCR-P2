@@ -1,36 +1,5 @@
-/** Import FONT AWSOME **/
-@import url("solid.min.css");
-@import url("fontawesome.min.css");
-
-/** Import Raleway font from Googlefont **/
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
-
-/** Reset CSS **/
-@import url("normalize.css");
-
-/*
-element {
-    position
-    top
-    left
-
-    width
-    height
-
-    margin
-    padding
-
-    display
-    flex
-
-    other styles
-}
-*/
-
-/** VARS **/
+/** VARS
 :root {
-
-    --desktop-document-width: 1340px;
 
     --booki-dark-blue: rgb(0, 101, 252);
     --booki-light-blue: rgb(222, 235, 255);
@@ -38,7 +7,10 @@ element {
     --booki-light-gray: rgb(242, 242, 242);
 
     --box-shadow-color: rgba(153, 153, 153, 0.3);
+
+    --host-section-padding-top: 42px;
 }
+ **/
 
 /** RESET
 A part from http://meyerweb.com/eric/tools/css/reset/
@@ -65,7 +37,7 @@ time, mark, audio, video {
 }
 input:focus, textarea:focus {
     box-shadow: none !important;
-    outline: groove 1px var(--booki-light-blue);
+    outline: groove 1px rgb(222, 235, 255);
 }
 
 /** COMMONS **/
@@ -74,8 +46,9 @@ body {
     font-size: 16px;
     color: #000;
 }
-header, main {
-    width: var(--desktop-document-width);
+header, main, footer > div#footer-inner {
+    width: 100%;
+    max-width: 1340px;
     margin: 0 auto;
 }
 h1 {
@@ -89,7 +62,7 @@ h2 {
 	margin-bottom: 22px;
 }
 a {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
     text-decoration: none;
 }
 b {
@@ -143,11 +116,11 @@ header > div#header-top > nav#header-right > a > i.nav-link-top-border {
 	border-top: 2px solid #fff;
 }
 header > div#header-top > nav#header-right > a > span:hover {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
     cursor: pointer;
 }
 header > div#header-top > nav#header-right > a > span:hover + i.nav-link-top-border {
-	border-top: 2px solid var(--booki-dark-blue);
+	border-top: 2px solid rgb(0, 101, 252);
 }
 
 /** MAIN **/
@@ -165,7 +138,7 @@ form#search > div#location-form-field {
 }
 form#search > div#location-form-field > i {
 	padding: 18px;
-	background-color: var(--booki-light-gray);
+	background-color: rgb(242, 242, 242);
 	border-radius: 15px 0 0 15px;
 }
 form#search > div#location-form-field > input {
@@ -175,9 +148,9 @@ form#search > div#location-form-field > input {
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 16px;
-    border-top: 1px solid var(--booki-light-gray);
+    border-top: 1px solid rgb(242, 242, 242);
     border-right: medium none;
-    border-bottom: 1px solid var(--booki-light-gray);
+    border-bottom: 1px solid rgb(242, 242, 242);
     border-left: medium none;
     font-size: 16px;
     font-weight: 600;
@@ -189,18 +162,18 @@ form#search > div#location-form-field > button {
     font-size: 16px;
 	font-weight: 600;
     color: #fff;
-    background-color: var(--booki-dark-blue);
-    border: 1px solid var(--booki-dark-blue);
+    background-color: rgb(0, 101, 252);
+    border: 1px solid rgb(0, 101, 252);
     border-radius: 0 15px 15px 0;
 }
 form#search > div#location-form-field > button > i {
     display: none;
 }
 form#search > div#location-form-field > button:hover {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
     background-color: #fff;
 }
-form#search > div#location-form-field > button:hover > i {
+form#search > div#location-form-field > button:hover > i.fa-chevron-right {
     display: inline;
 }
 form#search > div#filter-form-field {
@@ -231,12 +204,12 @@ form#search > div#filter-form-field > button.filter > span.filter-icon {
 	justify-content: center;
 	flex-flow: column wrap;
     text-align: center;
-	background-color: var(--booki-light-blue);
+	background-color: rgb(222, 235, 255);
 	border-radius: 25px;
 }
 form#search > div#filter-form-field > button.filter > span.filter-icon > i::before {
     font-size: 20px;
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 form#search > div#filter-form-field > button.filter > span.filter-text {
     width: fit-content;
@@ -247,16 +220,16 @@ form#search > div#filter-form-field > button.filter > span.filter-text {
 	flex-flow: column wrap;
     text-align: center;
     font-weight: 600;
-    border-top: 2px solid var(--booki-dark-gray);
-    border-right: 2px solid var(--booki-dark-gray);
-    border-bottom: 2px solid var(--booki-dark-gray);
+    border-top: 2px solid rgb(217, 217, 217);
+    border-right: 2px solid rgb(217, 217, 217);
+    border-bottom: 2px solid rgb(217, 217, 217);
     border-radius: 25px;
 }
 
 
 form#search > div#filter-form-field > button.filter:hover > span.filter-icon,
 form#search > div#filter-form-field > button.filter.active > span.filter-icon {
-    background-color: var(--booki-dark-blue);
+    background-color: rgb(0, 101, 252);
     color: #fff;
 }
 form#search > div#filter-form-field > button.filter:hover > span.filter-icon > i::before,
@@ -264,10 +237,10 @@ form#search > div#filter-form-field > button.filter.active > span.filter-icon > 
     color: #fff;
 }
 form#search > div#filter-form-field > button.filter:hover > span.filter-text {
-    color: var(--booki-dark-blue);
-    border-top: 2px solid var(--booki-light-blue);
-    border-right: 2px solid var(--booki-light-blue);
-    border-bottom: 2px solid var(--booki-light-blue);
+    color: rgb(0, 101, 252);
+    border-top: 2px solid rgb(222, 235, 255);
+    border-right: 2px solid rgb(222, 235, 255);
+    border-bottom: 2px solid rgb(222, 235, 255);
 }
 
 /* City host count */
@@ -287,10 +260,10 @@ div#host-city-count > span {
 	justify-content: center;
     text-align: center;
 	border-radius: 12px;
-	border: 1px solid var(--booki-dark-gray);
+	border: 1px solid rgb(217, 217, 217);
 }
 div#host-city-count > span > i::before {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 
 /* Host wrapper */
@@ -301,12 +274,9 @@ div#host {
     justify-content: space-between;
 }
 div#host > section {
-
-    --host-section-padding-top: 42px;
-
-    padding-top: var(--host-section-padding-top);
+    padding-top: 42px;
     border-radius: 20px;
-    background-color: var(--booki-light-gray);
+    background-color: rgb(242, 242, 242);
 }
 div#host > section > div.host-wrapper {
     width: 800px;
@@ -318,7 +288,7 @@ div#host > section > div.host-wrapper {
 }
 div#host > section > div.host-wrapper > a.host {
 	width: 246px;
-    box-shadow: 0 0 12px var(--box-shadow-color);
+    box-shadow: 0 0 12px rgba(153, 153, 153, 0.3);
     border-radius: 25px;
 }
 div#host > section > div.host-wrapper > a.host:hover {
@@ -337,14 +307,20 @@ div#host > section > div.host-wrapper > a.host > div.host-image {
 	overflow: hidden;
 }
 div#host > section > div.host-wrapper > a.host > div.host-image > img {
+    /** We need to define a default scale value to prevent dirty bounce effect after hover **/
+    /** We can't use the "scale()" sortcut because it bring a dirty bounce effect **/
+    -moz-transform: scaleX(1) scaleY(1) scaleZ(1);
+    -webkit-transform: scaleX(1) scaleY(1) scaleZ(1);
+    transform: scaleX(1) scaleY(1) scaleZ(1);
+
     -moz-transition: transform 400ms;
     -webkit-transition: transform 400ms;
     transition: transform 400ms;
 }
 div#host > section > div.host-wrapper > a.host:hover > div.host-image > img {
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
+    -moz-transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2);
+    -webkit-transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2);
+    transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2);
 }
 div#host > section > div.host-wrapper > a.host > div.host-info {
     /*
@@ -369,7 +345,7 @@ div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-h
     line-height: 20px;
 }
 div#host > section > div.host-wrapper > a.host:hover > div.host-info > div.host-info-header > h4 {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-header > p {
     font-size: 14px;
@@ -388,28 +364,28 @@ div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate {
 }
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate > i::before {
 	font-size: 14px;
-    color: var(--booki-dark-gray);
+    color: rgb(217, 217, 217);
 }
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.one-star > i:first-child::before {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.two-star > i:first-child::before,
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.two-star > i:nth-child(2)::before {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.three-star > i:first-child::before,
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.three-star > i:nth-child(2)::before,
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.three-star > i:nth-child(3)::before {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.four-star > i:first-child::before,
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.four-star > i:nth-child(2n)::before,
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.four-star > i:nth-child(3)::before {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.five-star > i:nth-child(1n)::before,
 div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.five-star > i:nth-child(2n)::before {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 div#host > section > a#city-read-more {
     margin-bottom: 50px;
@@ -422,7 +398,7 @@ div#host > section > a#city-read-more > i {
     visibility: hidden;
 }
 div#host > section > a#city-read-more:hover {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 div#host > section > a#city-read-more:hover > i {
     visibility: visible;
@@ -437,19 +413,21 @@ div#host > section#featured-host > h2 {
 }
 div#host > section#featured-host > h2 + i {
     position: absolute;
-    top: var(--host-section-padding-top);
+    top: 42px;
     right: 38px;
 }
 div#host > section#featured-host > h2 + i::before {
     font-size: 22px;
 }
 div#host > section#featured-host > div.host-wrapper {
-    width: 343px;
+    /* width: 343px; */
+    width: 344px;
     flex-flow: column wrap;
     gap: 32px;
 }
 div#host > section#featured-host > div.host-wrapper > a.host {
-	width: 343px;
+    /* width: 343px; */
+    width: 344px;
 	height: 144px;
 	display: flex;
 	flex-direction: row;
@@ -521,7 +499,7 @@ section#activities > div#activities-wrapper > div.activities-col > a.activity {
     display: flex;
     flex-direction: column;
 	border-radius: 25px;
-    box-shadow: 0 0 12px var(--box-shadow-color);
+    box-shadow: 0 0 12px rgba(153, 153, 153, 0.3);
 }
 section#activities > div#activities-wrapper > div.activities-col > a.activity:hover {
     box-shadow: none;
@@ -557,16 +535,15 @@ section#activities > div#activities-wrapper > div.activities-col > a.activity > 
 	color: #000;
 }
 section#activities > div#activities-wrapper > div.activities-col > a.activity:hover > span.activity-label {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }
 
 /* Activities wrapper */
 footer {
     padding: 48px 0 55px 0;
-    background-color: var(--booki-light-gray);
+    background-color: rgb(242, 242, 242);
 }
 footer > div#footer-inner {
-	width: var(--desktop-document-width);
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
@@ -587,5 +564,5 @@ footer > div#footer-inner > section > ul > li > a {
     color: #000;
 }
 footer > div#footer-inner > section > ul > li > a:hover {
-    color: var(--booki-dark-blue);
+    color: rgb(0, 101, 252);
 }

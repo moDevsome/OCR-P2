@@ -1,50 +1,189 @@
-header, main,
-footer > div#footer-inner,
-div#host > section#current-city-host,
-div#host > section#current-city-host > div.host-wrapper,
-section#activities,
+header, main, footer,
 div#host > section#featured-host {
     width: 100%;
+    max-width: 100%;
+}
+
+form#search, div#host-city-count,
+div#host > section#current-city-host,
+header > h1, header > h1 + p,
+section#activities,
+footer > div#footer-inner {
+    width: 90%;
     max-width: 760px;
 }
 
+header {
+	margin-bottom: 35px;
+}
+header > div#header-top {
+	margin-bottom: 35px;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+header > div#header-top > div#logo {
+	width: 60px;
+	margin: 28px auto 42px auto;
+}
+header > div#header-top > nav#header-right > a {
+	width: 50%;
+	flex-flow: column nowrap;
+	height: auto;
+	row-gap: 13px;
+}
+header > div#header-top > nav#header-right > a > i.nav-link-top-border {
+	border-top: 3px solid #fff;
+}
+header > div#header-top > nav#header-right > a > span:hover + i.nav-link-top-border {
+	border-top: 3px solid rgb(0, 101, 252);
+}
+header > h1, header > h1 + p {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+form#search {
+	margin: 0 auto 30px auto;
+}
+form#search > div#location-form-field {
+	width: 100%;
+	margin-bottom: 2px;
+}
+form#search > div#location-form-field > input {
+	width: calc(100% - 83px); /** (48px + 50px) - 15px = 83px **/
+}
+form#search > div#location-form-field > button {
+	width: 50px;
+	margin-left: -15px;
+	border-radius: 15px;
+}
+form#search > div#location-form-field > button > span,
+form#search > div#location-form-field > button:hover > i.fa-magnifying-glass {
+    display: none;
+}
+form#search > div#location-form-field > button > i.fa-magnifying-glass {
+	display: inline;
+}
+form#search > div#filter-form-field {
+	gap: 12px 9px;
+}
 form#search > div#filter-form-field > label {
     width: 100%; /** -> we force the width to full container with, it place the label on the top line of the flex container **/
 	padding-right: 0;
-	padding-left: 20px;
 }
-form#search > div#filter-form-field {
-	gap: 16px;
+div#host-city-count {
+	margin-left: auto;
+	margin-right: auto;
+	flex-flow: row nowrap;
+	align-items: baseline;
 }
 
 div#host {
+	margin-bottom: 0;
 	flex-flow: column-reverse wrap;
 	justify-content: space-between;
 }
 div#host > section > div.host-wrapper {
-    gap: 30px 20px;
-}
-div#host > section > div.host-wrapper > a.host {
-	width: 233px;
-}
-div#host > section > div.host-wrapper > a.host > div.host-image {
-    width: 223px;
+	margin: 0 auto 43px auto;
+	flex-flow: column wrap;
+	gap: 30px 30px;
 }
 div#host > section#current-city-host {
-    background-color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 40px;
+	background-color: #fff;
 }
 div#host > section#current-city-host > h2, div#host > section > a#city-read-more {
 	margin-left: 0;
 }
-div#host > section > a#city-read-more { margin-bottom: 0; }
-div#host > section#featured-host > div.host-wrapper {
-	width: 722px;
-	flex-flow: row wrap;
-	gap: 32px;
+div#host > section#current-city-host > h2 {
+	margin-bottom: 24px;
+}
+div#host > section#current-city-host > div.host-wrapper {
+	width: 100%;
+	margin-bottom: 34px;
+	flex-flow: column wrap;
+	gap: 10px;
+}
+div#host > section > div.host-wrapper > a.host {
+	width: 100%;
+	margin: 0 auto 0 auto;
+}
+div#host > section > div.host-wrapper > a.host > div.host-image {
+	width: calc(100% - 10px);
+	margin: auto;
+}
+@media screen and (min-width: 600px)  {
+	div#host > section > div.host-wrapper > a.host > div.host-image {
+		height: 124px;
+	}
+}
+div#host > section > div.host-wrapper > a.host > div.host-image > img {
+	width: 100%;
+}
+div#host > section > a#city-read-more {
+	margin-bottom: 58px;
 }
 
+div#host > section#featured-host {
+	border-radius: 0;
+}
+div#host > section#featured-host > div.host-wrapper {
+	margin-bottom: 36px;
+	gap: 10px;
+}
+div#host > section#featured-host > h2 {
+	margin-left: calc((100% - 344px) / 2);
+	margin-bottom: 26px;
+}
+div#host > section#featured-host > h2 + i {
+	right: calc((100% - 344px) / 2);
+}
+
+section#activities {
+	margin: 0 auto 0 auto;
+}
+section#activities > h2 {
+	margin-bottom: 33px;
+}
+section#activities > div#activities-wrapper, section#activities > div#activities-wrapper > div.activities-col {
+	gap: 24px;
+}
 section#activities > div#activities-wrapper {
-	flex-flow: row wrap;
-	justify-content: start;
-	gap: 45px 70px; /** ((760px - (302px * 2) / 2) - 8px = 70px **/
+	margin-bottom: 47px;
+	flex-flow: column wrap;
+}
+section#activities > div#activities-wrapper > div.activities-col {
+	width: 100%;
+	height: fit-content;
+}
+section#activities > div#activities-wrapper > div.activities-col > a#fort-pomegue {
+	height: fit-content;
+}
+section#activities > div#activities-wrapper > div.activities-col > a.activity > div.activity-image {
+	height: 134px;
+}
+section#activities > div#activities-wrapper > div.activities-col > a.activity > span.activity-label {
+	padding: 18px 20px 19px 20px;
+}
+section#activities > div#activities-wrapper > div.activities-col > a#fort-pomegue,
+section#activities > div#activities-wrapper > div.activities-col > a#iles-frioul,
+section#activities > div#activities-wrapper > div.activities-col > a#notre-dame,
+section#activities > div#activities-wrapper > div.activities-col > a#parc-longchamp {
+	height: 100%;
+}
+
+footer {
+	padding: 48px 0 48px 0;
+}
+footer > div#footer-inner {
+	flex-direction: column;
+	gap: 47px;
+}
+footer > div#footer-inner > section {
+	width: 100%;
+}
+footer > div#footer-inner > section > ul > li {
+	margin-bottom: 16px;
 }
