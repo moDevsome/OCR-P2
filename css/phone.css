@@ -161,16 +161,16 @@ section#activities > div#activities-wrapper > div.activities-col {
 section#activities > div#activities-wrapper > div.activities-col > a#fort-pomegue {
 	height: fit-content;
 }
-section#activities > div#activities-wrapper > div.activities-col > a.activity > div.activity-image {
+section#activities > div#activities-wrapper > div.activities-col > div.activity > div.activity-image {
 	height: 134px;
 }
-section#activities > div#activities-wrapper > div.activities-col > a.activity > span.activity-label {
+section#activities > div#activities-wrapper > div.activities-col > div.activity > span.activity-label {
 	padding: 18px 20px 19px 20px;
 }
-section#activities > div#activities-wrapper > div.activities-col > a#fort-pomegue,
-section#activities > div#activities-wrapper > div.activities-col > a#iles-frioul,
-section#activities > div#activities-wrapper > div.activities-col > a#notre-dame,
-section#activities > div#activities-wrapper > div.activities-col > a#parc-longchamp {
+section#activities > div#activities-wrapper > div.activities-col > div#fort-pomegue,
+section#activities > div#activities-wrapper > div.activities-col > div#iles-frioul,
+section#activities > div#activities-wrapper > div.activities-col > div#notre-dame,
+section#activities > div#activities-wrapper > div.activities-col > div#parc-longchamp {
 	height: 100%;
 }
 
