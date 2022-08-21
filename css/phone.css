@@ -106,20 +106,20 @@ div#host > section#current-city-host > div.host-wrapper {
 	flex-flow: column wrap;
 	gap: 10px;
 }
-div#host > section > div.host-wrapper > a.host {
+div#host > section > div.host-wrapper > div.host {
 	width: 100%;
 	margin: 0 auto 0 auto;
 }
-div#host > section > div.host-wrapper > a.host > div.host-image {
+div#host > section > div.host-wrapper > div.host > div.host-image {
 	width: calc(100% - 10px);
 	margin: auto;
 }
 @media screen and (min-width: 600px)  {
-	div#host > section > div.host-wrapper > a.host > div.host-image {
+	div#host > section > div.host-wrapper > div.host > div.host-image {
 		height: 124px;
 	}
 }
-div#host > section > div.host-wrapper > a.host > div.host-image > img {
+div#host > section > div.host-wrapper > div.host > div.host-image > img {
 	width: 100%;
 }
 div#host > section > a#city-read-more {

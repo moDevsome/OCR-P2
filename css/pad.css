@@ -24,10 +24,10 @@ div#host {
 div#host > section > div.host-wrapper {
     gap: 30px 20px;
 }
-div#host > section > div.host-wrapper > a.host {
+div#host > section > div.host-wrapper > div.host {
 	width: 233px;
 }
-div#host > section > div.host-wrapper > a.host > div.host-image {
+div#host > section > div.host-wrapper > div.host > div.host-image {
     width: 223px;
 }
 div#host > section#current-city-host {

@@ -76,6 +76,24 @@ button, input, textarea {
     font-size: 16px;
     cursor: pointer;
 }
+/** it better if ".host" and ".activity" are not links with "div" children **/
+div#host > section > div.host-wrapper > div.host,
+section#activities > div#activities-wrapper > div.activities-col > div.activity {
+    position: relative;
+}
+div#host > section > div.host-wrapper > div.host > a,
+section#activities > div#activities-wrapper > div.activities-col > div.activity > a {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+div#host > section > div.host-wrapper > div.host > a > span,
+section#activities > div#activities-wrapper > div.activities-col > div.activity > a > span  {
+    color: transparent;
+}
 
 /** HEADER **/
 header {
@@ -286,15 +304,15 @@ div#host > section > div.host-wrapper {
     justify-content: space-between;
     gap: 30px 30px;
 }
-div#host > section > div.host-wrapper > a.host {
+div#host > section > div.host-wrapper > div.host {
 	width: 246px;
     box-shadow: 0 0 12px rgba(153, 153, 153, 0.3);
     border-radius: 25px;
 }
-div#host > section > div.host-wrapper > a.host:hover {
+div#host > section > div.host-wrapper > div.host:hover {
     box-shadow: none;
 }
-div#host > section > div.host-wrapper > a.host > div.host-image {
+div#host > section > div.host-wrapper > div.host > div.host-image {
 	width: 236px;
     height: 114px;
     display: flex;
@@ -306,7 +324,7 @@ div#host > section > div.host-wrapper > a.host > div.host-image {
 	border-radius: 25px 25px 0 0;
 	overflow: hidden;
 }
-div#host > section > div.host-wrapper > a.host > div.host-image > img {
+div#host > section > div.host-wrapper > div.host > div.host-image > img {
     /** We need to define a default scale value to prevent dirty bounce effect after hover **/
     /** We can't use the "scale()" sortcut because it bring a dirty bounce effect **/
     -moz-transform: scaleX(1) scaleY(1) scaleZ(1);
@@ -317,12 +335,12 @@ div#host > section > div.host-wrapper > a.host > div.host-image > img {
     -webkit-transition: transform 400ms;
     transition: transform 400ms;
 }
-div#host > section > div.host-wrapper > a.host:hover > div.host-image > img {
+div#host > section > div.host-wrapper > div.host:hover > div.host-image > img {
     -moz-transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2);
     -webkit-transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2);
     transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2);
 }
-div#host > section > div.host-wrapper > a.host > div.host-info {
+div#host > section > div.host-wrapper > div.host > div.host-info {
     /*
         There are 16 pixels in each side on the wireframe, we sum 11px (padding) and 5px (border)
         There are 11 pixels in bottom, we sum 6px (padding) and 5px (border)
@@ -335,19 +353,19 @@ div#host > section > div.host-wrapper > a.host > div.host-info {
     border-right: 5px solid #fff;
 	border-radius: 0 0 25px 25px;
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-header > h4,
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-header > p {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-info-header > h4,
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-info-header > p {
     color: #000;
     margin-bottom: 8px;
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-header > h4  {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-info-header > h4  {
 	font-weight: 700;
     line-height: 20px;
 }
-div#host > section > div.host-wrapper > a.host:hover > div.host-info > div.host-info-header > h4 {
+div#host > section > div.host-wrapper > div.host:hover > div.host-info > div.host-info-header > h4 {
     color: rgb(0, 101, 252);
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-info-header > p {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-info-header > p {
     font-size: 14px;
 }
 /* City host section */
@@ -357,34 +375,34 @@ div#host > section#current-city-host {
 div#host > section#current-city-host > h2, div#host > section > a#city-read-more {
     margin-left: 40px;
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate {
 	display: flex;
 	flex-flow: row wrap;
 	gap: 2px;
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate > i::before {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate > i::before {
 	font-size: 14px;
     color: rgb(217, 217, 217);
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.one-star > i:first-child::before {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.one-star > i:first-child::before {
     color: rgb(0, 101, 252);
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.two-star > i:first-child::before,
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.two-star > i:nth-child(2)::before {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.two-star > i:first-child::before,
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.two-star > i:nth-child(2)::before {
     color: rgb(0, 101, 252);
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.three-star > i:first-child::before,
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.three-star > i:nth-child(2)::before,
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.three-star > i:nth-child(3)::before {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.three-star > i:first-child::before,
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.three-star > i:nth-child(2)::before,
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.three-star > i:nth-child(3)::before {
     color: rgb(0, 101, 252);
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.four-star > i:first-child::before,
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.four-star > i:nth-child(2n)::before,
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.four-star > i:nth-child(3)::before {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.four-star > i:first-child::before,
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.four-star > i:nth-child(2n)::before,
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.four-star > i:nth-child(3)::before {
     color: rgb(0, 101, 252);
 }
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.five-star > i:nth-child(1n)::before,
-div#host > section > div.host-wrapper > a.host > div.host-info > div.host-rate.five-star > i:nth-child(2n)::before {
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.five-star > i:nth-child(1n)::before,
+div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate.five-star > i:nth-child(2n)::before {
     color: rgb(0, 101, 252);
 }
 div#host > section > a#city-read-more {
@@ -425,14 +443,14 @@ div#host > section#featured-host > div.host-wrapper {
     flex-flow: column wrap;
     gap: 32px;
 }
-div#host > section#featured-host > div.host-wrapper > a.host {
+div#host > section#featured-host > div.host-wrapper > div.host {
     /* width: 343px; */
     width: 344px;
 	height: 144px;
 	display: flex;
 	flex-direction: row;
 }
-div#host > section#featured-host > div.host-wrapper > a.host > div.host-image {
+div#host > section#featured-host > div.host-wrapper > div.host > div.host-image {
 	width: 127px;
 	height: 134px;
 	display: flex;
@@ -445,13 +463,13 @@ div#host > section#featured-host > div.host-wrapper > a.host > div.host-image {
 	border-radius: 25px 0 0 25px;
 	overflow: hidden;
 }
-div#host > section#featured-host > div.host-wrapper > a.host > div.host-image > img {
+div#host > section#featured-host > div.host-wrapper > div.host > div.host-image > img {
     /* -moz-width: fit-content; */
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-div#host > section#featured-host > div.host-wrapper > a.host > div.host-info {
+div#host > section#featured-host > div.host-wrapper > div.host > div.host-info {
 	width: 210px;
     /*
         There are 15 pixel at the top of the element, we sum 15px (padding) and 5px (border-top)
@@ -471,7 +489,7 @@ div#host > section#featured-host > div.host-wrapper > a.host > div.host-info {
     border-right: 5px solid #fff;
 	border-radius: 0 25px 25px 0;
 }
-div#host > section#featured-host > div.host-wrapper > a.host > div.host-info > div.host-info-header {
+div#host > section#featured-host > div.host-wrapper > div.host > div.host-info > div.host-info-header {
     width: fit-content
 }
 
@@ -494,47 +512,48 @@ section#activities > div#activities-wrapper > div.activities-col {
     flex-direction: column;
     justify-content: space-between;
 }
-section#activities > div#activities-wrapper > div.activities-col > a.activity {
+section#activities > div#activities-wrapper > div.activities-col > div.activity {
+    position: relative;
     height: 100%;
     display: flex;
     flex-direction: column;
 	border-radius: 25px;
     box-shadow: 0 0 12px rgba(153, 153, 153, 0.3);
 }
-section#activities > div#activities-wrapper > div.activities-col > a.activity:hover {
+section#activities > div#activities-wrapper > div.activities-col > div.activity:hover {
     box-shadow: none;
 }
-section#activities > div#activities-wrapper > div.activities-col > a#fort-pomegue {
+section#activities > div#activities-wrapper > div.activities-col > div#fort-pomegue {
 	height: 236px;
 }
-section#activities > div#activities-wrapper > div.activities-col > a#iles-frioul {
+section#activities > div#activities-wrapper > div.activities-col > div#iles-frioul {
 	height: 164px;
 }
-section#activities > div#activities-wrapper > div.activities-col > a#notre-dame {
+section#activities > div#activities-wrapper > div.activities-col > div#notre-dame {
 	height: 194px;
 }
-section#activities > div#activities-wrapper > div.activities-col > a#parc-longchamp {
+section#activities > div#activities-wrapper > div.activities-col > div#parc-longchamp {
 	height: 208px;
 }
-section#activities > div#activities-wrapper > div.activities-col > a.activity > div.activity-image {
+section#activities > div#activities-wrapper > div.activities-col > div.activity > div.activity-image {
 	height: calc(100% - 55px);
     display: flex;
     flex-direction: column;
 	border-radius: 25px 25px 0 0;
     overflow: hidden;
 }
-section#activities > div#activities-wrapper > div.activities-col > a.activity > div.activity-image > img {
+section#activities > div#activities-wrapper > div.activities-col > div.activity > div.activity-image > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-section#activities > div#activities-wrapper > div.activities-col > a.activity > span.activity-label {
+section#activities > div#activities-wrapper > div.activities-col > div.activity > span.activity-label {
     padding: 20px;
     display: block;
     font-weight: 700;
 	color: #000;
 }
-section#activities > div#activities-wrapper > div.activities-col > a.activity:hover > span.activity-label {
+section#activities > div#activities-wrapper > div.activities-col > div.activity:hover > span.activity-label {
     color: rgb(0, 101, 252);
 }
 
