@@ -131,14 +131,14 @@ header > div#header-top > nav#header-right > a > span {
 }
 header > div#header-top > nav#header-right > a > i.nav-link-top-border {
 	color: #fff;
-	border-top: 2px solid #fff;
+	border-top: 1px solid #fff; /** OCR-P2-1 2px to 1px (wireframe coherence) **/
 }
 header > div#header-top > nav#header-right > a > span:hover {
     color: rgb(0, 101, 252);
     cursor: pointer;
 }
 header > div#header-top > nav#header-right > a > span:hover + i.nav-link-top-border {
-	border-top: 2px solid rgb(0, 101, 252);
+	border-top: 1px solid rgb(0, 101, 252); /** OCR-P2-1 2px to 1px (wireframe coherence) **/
 }
 
 /** MAIN **/
@@ -406,7 +406,7 @@ div#host > section > div.host-wrapper > div.host > div.host-info > div.host-rate
     color: rgb(0, 101, 252);
 }
 div#host > section > a#city-read-more {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     display: block;
     font-size: 18px;
     font-weight: 600;
