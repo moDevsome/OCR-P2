@@ -1,0 +1,50 @@
+header, main,
+footer > div#footer-inner,
+div#host > section#current-city-host,
+div#host > section#current-city-host > div.host-wrapper,
+section#activities,
+div#host > section#featured-host {
+    width: 100%;
+    max-width: 760px;
+}
+
+form#search > div#filter-form-field > label {
+    width: 100%; /** -> we force the width to full container with, it place the label on the top line of the flex container **/
+	padding-right: 0;
+	padding-left: 20px;
+}
+form#search > div#filter-form-field {
+	gap: 16px;
+}
+
+div#host {
+	flex-flow: column-reverse wrap;
+	justify-content: space-between;
+}
+div#host > section > div.host-wrapper {
+    gap: 30px 20px;
+}
+div#host > section > div.host-wrapper > a.host {
+	width: 233px;
+}
+div#host > section > div.host-wrapper > a.host > div.host-image {
+    width: 223px;
+}
+div#host > section#current-city-host {
+    background-color: #fff;
+}
+div#host > section#current-city-host > h2, div#host > section > a#city-read-more {
+	margin-left: 0;
+}
+div#host > section > a#city-read-more { margin-bottom: 0; }
+div#host > section#featured-host > div.host-wrapper {
+	width: 722px;
+	flex-flow: row wrap;
+	gap: 32px;
+}
+
+section#activities > div#activities-wrapper {
+	flex-flow: row wrap;
+	justify-content: start;
+	gap: 45px 70px; /** ((760px - (302px * 2) / 2) - 8px = 70px **/
+}
