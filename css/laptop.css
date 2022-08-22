@@ -1,0 +1,26 @@
+header, main, footer > div#footer-inner {
+    max-width: 960px;
+}
+div#host > section#current-city-host {
+	width: 580px;
+}
+div#host > section#current-city-host > div.host-wrapper {
+    width: 522px;
+}
+div#host > section#featured-host {
+	width: 364px;
+}
+
+section#activities > div#activities-wrapper > div.activities-col:last-child {
+	width: 100%;
+    height: fit-content;
+    flex-flow: row wrap;
+	justify-content: space-evenly;
+}
+section#activities > div#activities-wrapper > div.activities-col:last-child > div {
+	width: 302px;
+	margin-top: 40px;
+}
+section#activities > div#activities-wrapper > div.activities-col > div#notre-dame {
+    height: 208px;
+}
