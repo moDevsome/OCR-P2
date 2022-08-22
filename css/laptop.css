@@ -10,6 +10,12 @@ div#host > section#current-city-host > div.host-wrapper {
 div#host > section#featured-host {
 	width: 364px;
 }
+div#host > section#featured-host > h2 {
+	margin-left: calc((100% - 344px) / 2);
+}
+div#host > section#featured-host > h2 + i {
+	right: calc((100% - 344px) / 2);
+}
 
 section#activities > div#activities-wrapper > div.activities-col:last-child {
 	width: 100%;
