@@ -130,15 +130,27 @@ div#host > section#featured-host {
 	border-radius: 0;
 }
 div#host > section#featured-host > div.host-wrapper {
+	width: 90%; /* edit OCR-P2-2 */
+	max-width: 344px;
 	margin-bottom: 36px;
 	gap: 10px;
 }
+div#host > section#featured-host > div.host-wrapper > div.host {
+	width: 100%;
+}
 div#host > section#featured-host > h2 {
-	margin-left: calc((100% - 344px) / 2);
-	margin-bottom: 26px;
+	/* margin-left: calc((100% - 344px) / 2); // edit OCR-P2-2 */
+	width: 90%;
+	max-width: 344px;
+	margin: 0 auto 26px auto;
 }
 div#host > section#featured-host > h2 + i {
 	right: calc((100% - 344px) / 2);
+}
+@media screen and (max-width: 300px) { /** Custom style for Galaxy Fold and other screen with a width under 300px  edit OCR-P2-2 */
+	div#host > section#featured-host > h2 + i {
+		right: 5%;
+	}
 }
 
 section#activities {
