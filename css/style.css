@@ -521,7 +521,7 @@ section#activities > div#activities-wrapper > div.activities-col > div.activity 
     box-shadow: 0 0 12px rgba(153, 153, 153, 0.3);
 }
 section#activities > div#activities-wrapper > div.activities-col > div.activity:hover {
-    box-shadow: none;
+    box-shadow: 0 0 12px rgba(153, 153, 153, 0.1);
 }
 section#activities > div#activities-wrapper > div.activities-col > div#fort-pomegue {
 	height: 236px;
